@@ -1,22 +1,47 @@
-# FermiNet-Extended: 多体费米子系统的可扩展神经网络架构
+# FermiNet-Extended: A Scalable Neural Architecture for Many-Fermion Quantum Systems
 
-本项目在 DeepMind 开源的 FermiNet 框架基础上进行了系统性功能拓展，旨在构建一个更具通用性与可适配性的模拟平台，适用于研究多种物理体系（包括凝聚态与高能物理）中的多体费米子波函数结构与动力学性质。
-在原始 FermiNet 架构基础上，我们进行了以下重大扩展与修改：
+**FermiNet-Extended** is a systematically enhanced version of DeepMind's open-source FermiNet framework.  
+This project aims to create a more general-purpose and adaptable platform for studying many-body fermionic wavefunctions and their dynamics in various physical systems, including both **condensed matter** and **high-energy physics** domains.
 
-- **新增多种物理波函数结构**：
-  - **Laughlin 波函数**：适用于模拟分数量子霍尔效应中的强相关二维电子系统；
-  - **BCS 超导波函数**：用于模拟 Cooper 对形成与超导相；
-  - 支持自定义电子配对函数，拓展对多体关联结构的表达能力。
+---
 
-- **重新组织与拓展网络结构**：
-  - 改写部分神经网络模块以适配离散格点与连续空间系统；
-  - 为特定物理场景（如周期性边界、对称性要求）预留接口；
-  - 实现更高可控性的模型配置机制。
+###  Extended Support for Physical Wavefunctions
 
-- **大规模训练实验**：
-  - 使用 UCLA 的 [Hoffman2 超算平台](https://www.hoffman2.idre.ucla.edu/) 执行多个原子与分子体系的训练任务；
-  - 系统性评估不同波函数结构在多个物理体系下的表现。
+- **Laughlin Wavefunctions**  
+  For strongly correlated 2D electron systems in the fractional quantum Hall regime.
 
-- **关于本仓库**
-  - 本仓库所展示的内容仅用于说明作者在该项目中的研究方向，包括网络架构的改写与重组、波函数结构适配、以及新型多体相互作用的建模工作。
-  - 完整框架、训练数据与成果将于正式发表后提供。
+- **BCS-Type Superconducting States**  
+  Simulating Cooper pair formation and superconducting phases.
+
+- **Custom Pairing Functions**  
+  Extending the model’s ability to represent many-body correlation structures beyond Slater determinants.
+
+---
+
+###  Network Architecture Redesign
+
+- Modular redesign to support both **lattice-based** and **continuous-space** systems.
+- Interfaces for **periodic boundary conditions**, **symmetry constraints**, and flexible basis functions.
+- Configurable architecture with full control over depth, layer types, and interaction terms.
+
+---
+
+###  Large-Scale Training Experiments
+
+- Executed on the [Hoffman2 Supercomputing Cluster](https://www.hoffman2.idre.ucla.edu/) at UCLA.
+- Benchmarks conducted across atomic and molecular systems with multiple wavefunction forms.
+- Comparative evaluations on energy convergence and generalization performance.
+
+---
+
+##  About This Repository
+
+This repository presents an overview of the author's research contributions to the extended FermiNet architecture, including:
+
+- Redesign and adaptation of network modules  
+- Integration of new many-body wavefunctions  
+- Modeling of novel quantum interaction mechanisms  
+
+>  **Note**: Full implementation, datasets, and benchmark results will be released following formal publication.
+
+---
